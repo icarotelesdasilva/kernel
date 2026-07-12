@@ -11,7 +11,6 @@
 
 
 
-
 extern void gdt_flush(unsigned int);
 
 struct gdt_entry {
