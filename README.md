@@ -34,7 +34,7 @@ Welcome to the legitimate repository for a kernel designed for a future OS.
 
 
 
-# general requirements
+# GENERAL REQUIRIMENTS
 *Have the compilers installed; they are:*
 
 1- nasm gcc.
