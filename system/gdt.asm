@@ -4,7 +4,6 @@
 ; Este código é parte do projeto Kernel-Ícaro.
 ; Licenciado sob a licença GPL v3.
 
-
 BITS 32
 
 global gdt_flush
