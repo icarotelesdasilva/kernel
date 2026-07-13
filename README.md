@@ -1,10 +1,11 @@
-# kernel-icaro 1.0 
-Welcome to the legitimate repository for a kernel designed for a future OS.
+# kernel documentation 1.0 
+
+Welcome to kernel-icaro (temporary name) a project that is being made to facilitate users.
 
 ```What does this mean? ```
 
 
-> It means that you have found yourself with a repository that is increasingly advanced, like some things added for now in this 1.0 version.
+> It means that you have found a kernel project that is being made with the objective of facilitating users to create an OS with a kernel, it is being developed to be lighter and with the objective of already having almost everything ready such as management certain specific drivers among others.
 
 
 
@@ -14,9 +15,10 @@ Welcome to the legitimate repository for a kernel designed for a future OS.
  1- *Simple GDT Table (Global Descriptor Table)*, for memory management.
 
  2- New fixes, and general boot optimization.
- 
- *in addition to more organized files and new syntaxes.*
 
+ 3 - Simple memory management preventing kernel from overwriting reserved and important memory.
+ 
+ *in addition to more organized files and new Updates will only be written if they are very large or important.*
 
  
  
@@ -25,7 +27,7 @@ Welcome to the legitimate repository for a kernel designed for a future OS.
 
  
  
- 1-  Type ```Make Clean``` to clean up the files
+ 1-  Type ```make clean``` to clean up the files
  
  
  2- ```make all``` to compile all files
@@ -35,12 +37,21 @@ Welcome to the legitimate repository for a kernel designed for a future OS.
 
 
 
- 
- Current version 1.0.
+# GENERAL REQUIREMENTS
+*Have the compilers installed; they are:*
+
+1- nasm gcc, make.
+
+2- A virtual machine like QEMU or VirtualBox.
+
+These are the requirements I recommend.
 
 
 
 
+
+# STRUCTURE
+If you want to get an idea or a simple base of the kernel structure, go to the [map.md](map.md) file.
 
 
 

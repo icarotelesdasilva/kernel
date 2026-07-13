@@ -1,8 +1,12 @@
 ; Kernel-Ícaro (vmicaro)
 ; Copyright (c) 2026 Ícaro Teles da Silva (@icarotelesdasilva)
-;
-; Este código é parte do projeto Kernel-Ícaro.
-; Licenciado sob a licença GPL v3.
+; 
+; This code is part of the Kernel-Ícaro project.
+; Licensed under the GPL v3 License.
+; 
+; Copying, modification, or redistribution is prohibited without
+; maintaining this copyright and authorship notice.
+
 
 BITS 32
 
