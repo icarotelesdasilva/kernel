@@ -50,6 +50,8 @@ These are the requirements I recommend.
 
 
 
+# STRUCTURE
+If you want to get an idea or a simple base of the kernel structure, go to the [map-.md](map-.md) file.
 
 
 
