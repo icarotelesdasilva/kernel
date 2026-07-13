@@ -40,7 +40,7 @@ Welcome to kernel-icaro (temporary name) a project that is being made to facilit
 # GENERAL REQUIREMENTS
 *Have the compilers installed; they are:*
 
-1- nasm gcc, make.
+1- nasm, gcc, make.
 
 2- A virtual machine like QEMU or VirtualBox.
 
