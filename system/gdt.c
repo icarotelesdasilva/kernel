@@ -57,5 +57,5 @@ int  gdt_init()
 
     gdt_flush((unsigned int)&gdtr);
 
-return -1;
+return 0;
 }
