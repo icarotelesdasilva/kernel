@@ -1,4 +1,4 @@
-# kernel documentation 1.0 
+# kernel
 
 
 # STRUCTURE
