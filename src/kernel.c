@@ -13,6 +13,10 @@
 
 #include "drivers/vga.c"
 #include "../system/gdt.h" 
+#include "../system/pmm.h"
+
+int inicializar_filtro();
+int limpar_memoria();
 
 unsigned char bitmap[5] = {0, 0, 0, 0, 0};
 void  alocar_memoria() {
@@ -31,7 +35,7 @@ break;
 int  limpar_memoria() {
 
 for (int i = 0; i < 5; i++) {
-
+	
 if (bitmap[i] == 1) {
 
 bitmap[i] = 0;
@@ -54,6 +58,7 @@ if (gdt_init() !=0) {
 vga_print("Kernel Panic!");
 vga_print("\nUnable to load gdt.");
 while(1);
+
 }
 
 
@@ -67,18 +72,24 @@ while(1);
 
 if (limpar_memoria() !=0) {
 
-vga_print("Kernel Panic!");    
-vga_print("\nUnable to load limpar_memoria."); 
-while(1);
-}
-
-if (limpar_memoria() !=0) {
-
 
 vga_print("Kernel Panic!");    
 vga_print("\nUnable to load alocar_memoria.");
 while(1);
+
 }
+
+
+    pmm_init(); 
+
+    void* memoria = pmm_alocar_pagina(); 
+
+    if (memoria == 0) {
+        vga_print("Kernel Panic!");      
+        vga_print("\nUnable to load alocar_memoria.");
+        while(1);
+    }
+
 
 vga_print("Hello, Kernel!");
 
@@ -88,5 +99,5 @@ vga_print("Hello, Kernel!");
 while(1) {
 
 }
-}
 
+}
