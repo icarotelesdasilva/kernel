@@ -12,8 +12,8 @@
 
 
 #include "drivers/vga.c"
-#include "../system/gdt.h" 
-#include "../system/pmm.h"
+#include "../GDT/gdt.h" 
+#include "../memory/pmm.h"
 
 int inicializar_filtro();
 int limpar_memoria();

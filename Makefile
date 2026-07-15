@@ -24,17 +24,17 @@ kernel.o: src/kernel.c
 vmicaro: boot.o kernel.o gdt.o gdt_asm.o mem.o pmm.o
 	$(LD) -T linker.ld boot.o kernel.o gdt.o gdt_asm.o mem.o pmm.o -o vmicaro
 
-gdt.o: system/gdt.c
-	$(CC) $(CFLAGS) -c system/gdt.c -o gdt.o
+gdt.o: GDT/gdt.c
+	$(CC) $(CFLAGS) -c GDT/gdt.c -o gdt.o
 
-gdt_asm.o: system/gdt.asm
-	$(ASM) -f elf32 system/gdt.asm -o gdt_asm.o
+gdt_asm.o: GDT/gdt.asm
+	$(ASM) -f elf32 GDT/gdt.asm -o gdt_asm.o
 
-mem.o: system/mem.c
-	$(CC) $(CFLAGS) -c system/mem.c -o mem.o
+mem.o: memory/mem.c
+	$(CC) $(CFLAGS) -c memory/mem.c -o mem.o
 
-pmm.o: system/pmm.c
-	$(CC) $(CFLAGS) -c system/pmm.c -o pmm.o
+pmm.o: memory/pmm.c
+	$(CC) $(CFLAGS) -c memory/pmm.c -o pmm.o
 
 all: vmicaro
 	mkdir -p isodir/boot/grub

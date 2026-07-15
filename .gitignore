@@ -1,0 +1,10 @@
+boot.o
+gdt_asm.o  
+gdt.o  
+kernel.o 
+isodir/
+kernel.o
+mem.o
+pmm.o
+vmicaro
+vmicaro.iso
