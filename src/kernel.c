@@ -95,15 +95,8 @@ while(1);
 
 }
 
-definir_porta_idt(33, (uint32_t)keyboard_handler, 0x08, 0x8E);
-
 vga_print("Hello, Kernel!");
 
-
-
-
-while(1) {
-
-}
+    while (1);
 
 }

@@ -9,15 +9,28 @@ static const char kbd_us[128] = {
     0, /* Right Shift */ '*', 0, /* Alt */ ' ', /* Space */
 };
 
+volatile char utima_tecla = 0;
 void keyboard_handler_c(void) {
-
 unsigned char scancode = inb(0x60);
 pic_send_eoi(1);
 if (scancode < 0x80) {
 char key = kbd_us[scancode];
 if (key != 0) {
 	char srt[2] = {key, '\0'};
-	vga_print("str");
+	    utima_tecla = key;
 }	
 }	
+}
+
+
+
+char kgetc(void) {
+while (utima_tecla == 0) {
+asm volatile("hlt");
+}
+
+char tecla = utima_tecla;
+utima_tecla = 0;
+return tecla;
+
 }
