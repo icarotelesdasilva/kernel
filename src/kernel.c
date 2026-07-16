@@ -9,7 +9,8 @@
 #include "../GDT/gdt.h" 
 #include "../memory/pmm.h"
 #include "../IDT/idt.h" 
-
+#include "../PIC/pic.h"
+extern void irq0_handler(void);
 int inicializar_filtro();
 int limpar_memoria();
 
@@ -91,6 +92,7 @@ vga_print("\nUnable to load inicializar_idt.");
 while(1);
 
 }
+
 
 vga_print("Hello, Kernel!");
 
