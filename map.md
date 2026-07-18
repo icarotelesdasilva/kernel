@@ -1,0 +1,68 @@
+.
+
+├── arch
+
+│   └── i386
+
+│       ├── boot.asm
+
+│       ├── gdt.asm
+
+│       ├── gdt.c
+
+│       ├── idt.asm
+
+│       ├── idt.c
+
+│       ├── linker.ld
+
+│       └── pmm.c
+
+├── drivers
+
+│   ├── kernel_panic.c
+
+│   └── vga.c
+
+├── grub
+
+│   └── grub.cfg
+
+├── include
+
+│   ├── gdt.h
+
+│   ├── idt.h
+
+│   └── pmm.h
+
+├── kernel
+
+│   └── kernel.c
+
+├── LICENSE
+
+├── Makefile
+
+├── README.md
+
+└── test
+
+    ├── keyboard
+
+    │   ├── keyboard.asm
+
+    │   ├── keyboard.c
+
+    │   └── keyboard.h
+
+    └── PIC
+
+        ├── pic.asm
+
+        ├── pic.c
+
+        └── pic.h
+
+
+

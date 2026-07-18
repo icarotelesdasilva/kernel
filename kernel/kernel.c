@@ -7,7 +7,8 @@
 
 #include "gdt.h"   
 #include "idt.h"   
-#include "pmm.h"
+extern void pmm_init(void);
+extern void* pmm_alloc_page(void);
 extern void kernel_panic(char *str);
 extern void vga_print(const char* str);  
 void kmain(void) {
@@ -20,7 +21,8 @@ void kmain(void) {
         kernel_panic("Kernel Panic!\nUnable to load IDT.");
         while(1);
     }
-
+pmm_init();
+void* pagina_teste = pmm_alloc_page();
 
     vga_print("Hello, Kernel!");
 
