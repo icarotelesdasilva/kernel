@@ -5,7 +5,8 @@ See the [LICENSE](LICENSE) file for more details.
 
 
 
-```├── arch
+```
+├── arch
 
 │   └── i386
 
