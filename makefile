@@ -16,7 +16,7 @@ OBJ = arch/i386/boot.o \
       drivers/vga.o \
       drivers/kernel_panic.o \
       arch/i386/pmm.o \
-	drivers/pic.o \
+	arch/i386/pic.o \
       kernel/kernel.o
 
 %.o: %.c
