@@ -2,7 +2,7 @@
 
 void isr_handler(registers_t regs) {
 switch (regs.int_no) {
-
+// fuck code 
 case 0:
 break;
 default:
