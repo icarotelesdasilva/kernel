@@ -1,4 +1,4 @@
-#include "../arch/i386/boot/multiboot.h"
+#include "../boot/multiboot.h"
 
 void init_gdt(void);
 extern void kernel_panic(char *str);
