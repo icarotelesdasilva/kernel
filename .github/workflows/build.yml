@@ -26,10 +26,13 @@ jobs:
             grub-common \
             xorriso \
             mtools
- 
-      - name: rodar make clean
-        run: make clean
 
       - name: Rodar make all
         run: make all
+
+      - name: Guardar ISO do Kernel
+        uses: actions/upload-artifact@v4
+        with:
+          name: vmicaro-iso
+          path: vmicaro.iso
 
