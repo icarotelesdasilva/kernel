@@ -15,3 +15,4 @@ logs_completos.txt
 logs_completos.txt
 kernel_xtensa.bin
 vmicaro_xtensa.elf
+start.o
